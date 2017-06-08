@@ -9,7 +9,10 @@ library(shinyBS)
 library(leaflet)
 library(RColorBrewer)
 library(mapview)
+library(DT)
 
 
 ### MapBox Attribution##
 map_attr <- "<a href='https://www.mapbox.com/map-feedback/'>Mapbox</a>"
+
+species <- read.csv("species.csv")
