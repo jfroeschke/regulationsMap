@@ -10,13 +10,11 @@ dashboardPage(
                     tags$hr(style="border-color: white;"),
                     tags$head(includeCSS("Style.css")),
                     div(
-                    dateRangeInput("daterange1", h3("Date range:"),
-                                   start = Sys.Date(),
-                                   end   = Sys.Date()),
-                    bsTooltip("daterange1", 
-                              "Select range of dates for applicable regulations. Defaults to current date", options = list(container = "body"))
-                    ),
-                    
+                         selectInput("selectGear", h3("I'm looking for:"),
+                                     c("Commercial regualtions" = "COMMERCIAL",
+                                       "Recreational regulations" = "RECREATIONAL",
+                                       "All regulations" = "ALL"),
+                                     selected = "ALL")),
                     div(
                          selectInput("selectFMP", h3("Select Fishery Management Plan:"),
                                      c("Reef fish" = "REEFFISH",
@@ -28,13 +26,19 @@ dashboardPage(
                                    "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
                          #           "Select applicable FMP", options = list(container = "body"))
-                         ),
+                    ),
+                    
+                    
                     div(
-                         selectInput("selectGear", h3("Select gear:"),
-                                     c("Commercial" = "COMMERCIAL",
-                                       "Recreational" = "RECREATIONAL",
-                                       "All" = "ALL"),
-                                     selected = "ALL")),
+                    dateRangeInput("daterange1", h3("Date range:"),
+                                   start = Sys.Date(),
+                                   end   = Sys.Date()),
+                    bsTooltip("daterange1", 
+                              "Select range of dates for applicable regulations. Defaults to current date", options = list(container = "body"))
+                    ),
+                    
+                
+                    
                     
                     div(img(src="logo.png"), style="text-align: center;"),
                     div(tags$a(href="mailto: portal@gulfcouncil.org", h3("Contact us")), align="center")
