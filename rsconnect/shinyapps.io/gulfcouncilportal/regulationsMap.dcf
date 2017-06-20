@@ -1,0 +1,10 @@
+name: regulationsMap
+account: gulfcouncilportal
+server: shinyapps.io
+appId: 190813
+bundleId: 875120
+url: https://gulfcouncilportal.shinyapps.io/regulationsMap/
+when: 1497963712.13248
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data/al_smz.zip|data/gulf_reefll_seasonal.zip|data/longline_buoy.zip|data/madswan_steamboat_edges.zip|data/NGrouper.zip|data/reef_stressed.zip|data/SGrouper.zip|data/texasClosure.zip|data/texasClosureExcept.zip

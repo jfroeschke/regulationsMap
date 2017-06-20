@@ -6,8 +6,7 @@ server <- function(input, output) {
                df2 <- subset(df, df$FMP %in% input$selectFMP)
                tmp <- df2$URL
                tmp
-          
-     })
+                              })
      
       
       output$tbl2 <- renderText({superSelector()})
