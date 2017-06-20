@@ -10,18 +10,19 @@ dashboardPage(
                     tags$hr(style="border-color: white;"),
                     tags$head(includeCSS("Style.css")),
                     div(
-                         selectInput("selectGear", h3("I'm looking for:"),
+                         selectInput("selectSector", h3("I'm looking for:"),
                                      c("Commercial regualtions" = "COMMERCIAL",
                                        "Recreational regulations" = "RECREATIONAL",
                                        "All regulations" = "ALL"),
                                      selected = "ALL")),
                     div(
-                         selectInput("selectFMP", h3("Select Fishery Management Plan:"),
-                                     c("Reef fish" = "REEFFISH",
-                                       "Lobster" = "RECREATIONAL",
-                                       "Coastal Migratory Pelagic" = "CMP",
-                                       "All" = "ALL"),
-                                     selected = "ALL"),
+                         selectInput("selectFMP", multiple=TRUE,
+                                     h3("Select Fishery Management Plan:"),
+                                     c("Reef" = "Reef",
+                                       "Shrimp" = "Shrimp",
+                                       # "Coastal Migratory Pelagic" = "CMP",
+                                       "All" = "All"),
+                                     selected = "All"),
                          bsTooltip("selectFMP", 
                                    "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
@@ -46,7 +47,10 @@ dashboardPage(
      dashboardBody(
           tabItems(
                tabItem(tabName='map',
-                  leafletOutput('map',height=600)),
+                  leafletOutput('map',height=600),
+                  textOutput('tbl2')
+                  ),
+               
                tabItem(tabName='table',
                        DT::dataTableOutput('tbl')
                        )

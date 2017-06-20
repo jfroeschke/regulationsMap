@@ -1,0 +1,5 @@
+URL,Group,FMP,Gear,Color
+https://api.mapbox.com/styles/v1/gulffish123/cj3ycoorm06302qmralrl4dk3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ3VsZmZpc2gxMjMiLCJhIjoiY2l5a2IweTVtMDAwdDJxcGYzYmR0b3lndyJ9.PjwB4UC9ESaDhoe3ed_YKg,MADSWAN,Reef,Trawl,
+https://api.mapbox.com/styles/v1/gulffish123/cj404od2w058c2snp6bqjdmlc/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ3VsZmZpc2gxMjMiLCJhIjoiY2l5a2IweTVtMDAwdDJxcGYzYmR0b3lndyJ9.PjwB4UC9ESaDhoe3ed_YKg,ALSMZ,Reef,Longline,
+https://api.mapbox.com/styles/v1/gulffish123/cj407gtx400km2sqo2ixrzkff/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ3VsZmZpc2gxMjMiLCJhIjoiY2l5a2IweTVtMDAwdDJxcGYzYmR0b3lndyJ9.PjwB4UC9ESaDhoe3ed_YKg,TEXASCLOSURE,Shrimp,Trawl,
+https://api.mapbox.com/styles/v1/gulffish123/cj407v1cj08ox2rqmhaiuk85r/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ3VsZmZpc2gxMjMiLCJhIjoiY2l5a2IweTVtMDAwdDJxcGYzYmR0b3lndyJ9.PjwB4UC9ESaDhoe3ed_YKg,TEXASCLOSUREEXCEPT,Shrimp,Trawl,
