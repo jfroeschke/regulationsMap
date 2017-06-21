@@ -20,7 +20,8 @@ server <- function(input, output) {
                addScaleBar(position="bottomright") #%>% 
         
           for(i in 1:length(superSelector())){
-          map <- map %>%  addTiles(superSelector()[i]) 
+          #map <- map %>%  addTiles(superSelector()[i]) 
+          map <- map %>%  addEsriDynamicMapLayer(superSelector()[i])
             }
             
        map

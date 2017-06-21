@@ -1,0 +1,4 @@
+URL,Group,FMP,Gear,Color
+http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/GulfReefLonglineSeasonal/MapServer,Gulf Reef Longline Seasonal,Reef,Trawl,
+http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/GulfShrimpBycatch/MapServer,Gulf Shrimp Bycatch,Reef,Longline,
+http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/ReefStressed/MapServer,Reef Stressed,Shrimp,Trawl,
