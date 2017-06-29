@@ -5,8 +5,8 @@ dashboardPage(
      dashboardHeader(title="Title"),
           dashboardSidebar(
                sidebarMenu(id = "tab",
-                    menuItem("Map", tabName = "map", icon = icon("fa fa-globe"),selected=TRUE),
-                    menuItem("Table", tabName = "table", icon = icon("fa fa-table")),
+                    menuItem("Map", tabName = "map", icon = icon("globe"),selected=TRUE),
+                    menuItem("Table", tabName = "table", icon = icon("table")),
                     tags$hr(style="border-color: white;"),
                     tags$head(includeCSS("Style.css")),
                     div(
@@ -14,15 +14,14 @@ dashboardPage(
                                      c("Commercial regualtions" = "COMMERCIAL",
                                        "Recreational regulations" = "RECREATIONAL",
                                        "All regulations" = "ALL"),
-                                     selected = "ALL")),
+                                     selected = "COMMERCIAL")),
                     div(
                          selectInput("selectFMP", multiple=TRUE,
                                      h3("Select Fishery Management Plan:"),
-                                     c("Reef" = "Reef",
-                                       "Shrimp" = "Shrimp",
-                                       # "Coastal Migratory Pelagic" = "CMP",
-                                       "All" = "All"),
-                                     selected = "All"),
+                                     c("Reef" = "REEF",
+                                       "Shrimp" = "SHRIMP",
+                                       "Coastal Migratory Pelagic" = "CMP"),
+                                     selected = c("SHRIMP")),
                          bsTooltip("selectFMP", 
                                    "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
@@ -38,8 +37,8 @@ dashboardPage(
                               "Select range of dates for applicable regulations. Defaults to current date", options = list(container = "body"))
                     ),
                     
-                
-                    
+                    bookmarkButton(title=HTML('Click here to bookmark the current page with selections retained.
+                                Generates a URL to return here.')),
                     
                     div(img(src="logo.png"), style="text-align: center;"),
                     div(tags$a(href="mailto: portal@gulfcouncil.org", h3("Contact us")), align="center")
