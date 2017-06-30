@@ -20,8 +20,9 @@ dashboardPage(
                                      h3("Select Fishery Management Plan:"),
                                      c("Reef" = "REEF",
                                        "Shrimp" = "SHRIMP",
+                                       "Lobster" = "LOBSTER",
                                        "Coastal Migratory Pelagic" = "CMP"),
-                                     selected = c("SHRIMP")),
+                                     selected = c("LOBSTER")),
                          bsTooltip("selectFMP", 
                                    "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
@@ -37,11 +38,13 @@ dashboardPage(
                               "Select range of dates for applicable regulations. Defaults to current date", options = list(container = "body"))
                     ),
                     
-                    bookmarkButton(title=HTML('Click here to bookmark the current page with selections retained.
-                                Generates a URL to return here.')),
+                    
                     
                     div(img(src="logo.png"), style="text-align: center;"),
-                    div(tags$a(href="mailto: portal@gulfcouncil.org", h3("Contact us")), align="center")
+                    div(tags$a(href="mailto: portal@gulfcouncil.org", h3("Contact us")), align="center"),
+                    div(br()),
+                    div(bookmarkButton(title=HTML('Click here to bookmark the current page with selections retained.
+                                Generates a URL to return here.')), align="center")
                     )),
      dashboardBody(
           tabItems(

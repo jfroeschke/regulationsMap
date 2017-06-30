@@ -7,12 +7,35 @@ server <- function(input, output) {
                #df2 <- subset(df2, df$Sector %in% input$selectSector)
                #df2 <- subset(df2, Start < input$daterange1[1])
                #df2 <- subset(df2, End > input$daterange1[2])
+               df2 <- arrange(df2, desc(order))
                tmp <- df2$URL
                tmp
                               })
      
+     legendSelector <- reactive({
+          df2 <- subset(df, df$FMP %in% input$selectFMP)
+          #df2 <- subset(df2, df$Sector %in% input$selectSector)
+          #df2 <- subset(df2, Start < input$daterange1[1])
+          #df2 <- subset(df2, End > input$daterange1[2])
+          df2 <- arrange(df2, desc(order))
+          df2 <- select(df2, Color, Name)
+          tmp <- df2
+          tmp
+     })
+     
+     radioSelector <- reactive({
+          df2 <- subset(df, df$FMP %in% input$selectFMP)
+          #df2 <- subset(df2, df$Sector %in% input$selectSector)
+          #df2 <- subset(df2, Start < input$daterange1[1])
+          #df2 <- subset(df2, End > input$daterange1[2])
+          df2 <- arrange(df2, desc(order))
+          df2 <- select(df2, Color, Name)
+          tmp <- df2
+          tmp
+     })
+     
       
-      output$tbl2 <- renderText({superSelector()})
+      output$tbl2 <- renderText({legendSelector()})
       
      output$map <- renderLeaflet({  
           map <- leaflet() %>% 
@@ -22,7 +45,12 @@ server <- function(input, output) {
                         options = providerTileOptions(noWrap = TRUE)) %>%
                setView(-85, 27.75, zoom = 6) %>% 
                addMouseCoordinates(style=c("basic")) %>% 
-               addScaleBar(position="bottomright") #%>% 
+               addScaleBar(position="bottomright") 
+          
+          
+          map <- map %>%  addLegend(colors=c(legendSelector()$Color), 
+                         labels=c(legendSelector()$Name),
+                         opacity=1, position="bottomleft")
           
         
           for(i in 1:length(superSelector())){
@@ -31,8 +59,6 @@ server <- function(input, output) {
             }
             
        map
-
-          
      })
      
      output$tbl = DT::renderDataTable(
