@@ -60,3 +60,7 @@ dashboardPage(
           
           )
 )
+
+####################Example dynamic UI output
+# checkboxInput("checkbox", "Report Goliath Grouper interaction", FALSE),
+# uiOutput("conditionalInput")
