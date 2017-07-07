@@ -23,7 +23,7 @@ map <- map %>%
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/PulleyRidge/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/StetsonBank/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/Tortugas/MapServer")
-#addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/AlabamaSMZ/MapServer")
+addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/AlabamaSMZ/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/GulfReefLonglineSeasonal/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/LonglineBuoy/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/MadisonSwanson/MapServer")
@@ -36,7 +36,7 @@ map <- map %>%
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/SouthwestFlSeasonalTrawlClosure/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/TexasShrimpClosure/MapServer")
 #addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/TortugasShrimpSanctuary/MapServer")
-addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/lobstertrapgear/MapServer")
+#addEsriDynamicMapLayer("http://portal.gulfcouncil.org/arcgis/rest/services/ManagementMaps/lobstertrapgear/MapServer")
 map
 
 

@@ -16,19 +16,64 @@ dashboardPage(
                                        "All regulations" = "ALL"),
                                      selected = "COMMERCIAL")),
                     div(
-                         selectInput("selectFMP", multiple=TRUE,
+                         selectInput("selectFMP", multiple=FALSE,
                                      h3("Select Fishery Management Plan:"),
-                                     c("Reef" = "REEF",
-                                       "Shrimp" = "SHRIMP",
-                                       "Lobster" = "LOBSTER",
-                                       "Coastal Migratory Pelagic" = "CMP"),
-                                     selected = c("LOBSTER")),
+                                     c("Coastal Migratory Pelagic" = "CMP",
+                                        "Coral" = "CORAL",
+                                        "Lobster" = "LOBSTER",
+                                        "Reef" = "REEF",
+                                        "Shrimp" = "SHRIMP"
+                                       ),
+                                     selected = c("CORAL")),
                          bsTooltip("selectFMP", 
                                    "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
                          #           "Select applicable FMP", options = list(container = "body"))
                     ),
                     
+                    uiOutput("conditionalInput"),
+                    conditionalPanel(
+                         condition = "input.selectFMP == 'CMP'",
+                         checkboxGroupInput("CMPlayers", "CMP layers",
+                                            c("Cobia Migratory Zones" = "CobiaMigratoryZones",
+                                              "King Mackerel Migratory Zones" = "KingMackerelMigratoryZones",
+                                              "Spanish Mackerel" = "SpanishMackerelMigratoryZones"))
+                         ),
+                    # 
+                    conditionalPanel(
+                         condition = "input.selectFMP == 'LOBSTER'",
+                         checkboxGroupInput("LOBSTERlayers", "Lobster layers:",
+                                            c("Lobster Trap Closure" = "LobsterTrapClosure"
+                                              ))
+                    ),
+
+                    conditionalPanel(
+                         condition = "input.selectFMP == 'CORAL'",
+                         checkboxGroupInput("CORALlayers", "Coral layers:",
+                                            c("McGrail Bank" = "McGrailBank",
+                                              "MiddleGrounds" = "MiddleGrounds",
+                                              "Pulley Ridge" = "PulleyRidge",
+                                              "Stetson Bank" = "StetsonBank",
+                                              "Tortugas" = "Tortugas"
+                                            ))
+                    ),
+                    
+                    conditionalPanel(
+                         condition = "input.selectFMP == 'REEF'",
+                         checkboxGroupInput("REEFlayers", "Reef fish layers:",
+                                            c("Alabama SMZ" = "AlabamaSMZ",
+                                              "Gulf Reef Longline Seasonal Closure" = "GulfReefLonglineSeasonalClosure",
+                                              "Longline Buoy Closure" = "LonglineBuoyClosure",
+                                              "Madison Swanson" = "MadisonSwanson",
+                                              "Reef Fish Stressed Area" = "ReefStressedArea",
+                                              "Shallow Water Grouper Closed Area" = "ShallowWaterGrouperClosedArea",
+                                              "Steamboat Lumps" = "SteamboatLumps",
+                                              "The Edges" = "TheEdges"
+                                            ))
+                    ),
+
+                    
+
                     
                     div(
                     dateRangeInput("daterange1", h3("Date range:"),
@@ -50,7 +95,7 @@ dashboardPage(
           tabItems(
                tabItem(tabName='map',
                   leafletOutput('map',height=600),
-                  textOutput('tbl2')
+                  tableOutput('tbl2')
                   ),
                
                tabItem(tabName='table',

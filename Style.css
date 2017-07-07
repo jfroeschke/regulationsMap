@@ -37,3 +37,12 @@
 /* color for body background*/
 /*.content-wrapper, .right-side { */
 	/*background-color: #1890a8;*/
+.info{
+background-color: #FFFFFF;
+padding: 10px;
+
+}
+
+.legend{
+line-height: 25px;
+}
