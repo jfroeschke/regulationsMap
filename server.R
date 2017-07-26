@@ -5,6 +5,10 @@ server <- function(input, output) {
      superSelector <- reactive({
                df <- subset(df, df$FMP %in% input$selectFMP)
                
+               if(input$selectFMP == "SHRIMP"){
+                 df <- subset(df, df$Name2 %in% input$SHRIMPlayers)
+               } 
+               
                if(input$selectFMP == "CMP"){
                     df <- subset(df, df$Name2 %in% input$CMPlayers)
                } 
@@ -21,6 +25,9 @@ server <- function(input, output) {
                     df <- subset(df, df$Name2 %in%  input$CORALlayers)
                }
               
+                    df <- subset(df, Start <= input$daterange1[1])
+                    df <- subset(df, End >= input$daterange1[2])
+               
                df <- arrange(df, desc(order))
                tmp <- df$URL
                tmp
@@ -45,39 +52,82 @@ server <- function(input, output) {
      #      tmp <- df2
      #      tmp
      # })
+ ###highly experimental    
+    inBounds <- reactive({
+          if (is.null(input$map_bounds)){
+          #      return(zipdata[FALSE,])
+  
+      
+          bounds <- input$map_bounds
+          
+         boundsOut <- data.frame(N=bounds$north,
+                                S=bounds$south,
+                                E=bounds$east,
+                                W=bounds$west)
+         
+         boundsLL <- data.frame(EW=((bounds$east + bounds$west)/2),
+                                 NS=((bounds$north + bounds$south)/2)
+                                )
+         boundsLL                    
+         #boundsOut
+         }
+         
+                              
+     })
      
+    test <- reactive({data.frame(input$map_bounds)
+    })
+
       
-      output$tbl2 <- renderTable({legendSelector()})
-      
+      #output$tbl2 <- renderTable({legendSelector()})
+      output$tbl2 <- renderTable({inBounds()})
+      output$tbl3 <- renderText({input$map_zoom})
+      #output$tbl4 <- renderPrint({input$lat})
      output$map <- renderLeaflet({  
           map <- leaflet() %>% 
                addTiles('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
                         options = providerTileOptions(noWrap = TRUE)) %>%
                addTiles('http://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/Mapserver/tile/{z}/{y}/{x}',
                         options = providerTileOptions(noWrap = TRUE)) %>%
-               setView(-85, 27.75, zoom = 6) %>% 
-               addMouseCoordinates(style=c("basic")) %>% 
-               addScaleBar(position="bottomright") 
-          
+               addScaleBar(position="bottomright") %>% 
+setView(-85, 27, zoom=6) %>% 
+            addMouseCoordinates(style=("basic")) 
+            if(input$selectFMP == "LOBSTER"){
+             map <- map %>%  setView(-82, 25, zoom=9) 
+            }
+              
+              
+            
           
           map <- map %>%  addLegend(colors=c(legendSelector()$Color),
                          labels=c(legendSelector()$Name),
                          opacity=1, position="bottomleft")
 
-        
-          for(i in 1:length(superSelector())){
-          map <- map %>%  addEsriDynamicMapLayer(superSelector()[i])
-            }
-            
-       map
      })
      
-     # Tried this, not helping
-     # observeEvent(input$map_zoom,{
-     #      proxy  <- leafletProxy("map") %>%  
-     #           setView(-85, 27.75, zoom = input$map_zoom)
-     # })
      
+      
+      observe({
+        map  <- leafletProxy('map') 
+        map <- map  %>% leaflet::clearGroup(group="A") #%>% 
+          # isolate({map <- map  %>%
+          # setView(inBounds()$EW, inBounds()$NS, zoom = input$map_zoom)
+          # })
+        for(i in 1:length(superSelector())){
+          map <- map  %>%
+            addEsriDynamicMapLayer(superSelector()[i], group="A")
+        }
+          
+        map
+      })
+     
+      observeEvent(input$map_zoom,{
+        leafletProxy("map") %>% 
+          setView(lat  = (input$map_bounds$north + input$map_bounds$south) / 2,
+                  lng  = (input$map_bounds$east + input$map_bounds$west) / 2,
+                  zoom = input$map_zoom)
+      })
+      
      
      output$tbl = DT::renderDataTable(
           species, options = list(lengthChange = FALSE))

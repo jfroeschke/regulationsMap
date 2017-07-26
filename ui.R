@@ -25,6 +25,7 @@ dashboardPage(
                                         "Shrimp" = "SHRIMP"
                                        ),
                                      selected = c("CORAL")),
+                         
                          bsTooltip("selectFMP", 
                                    "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
@@ -37,16 +38,32 @@ dashboardPage(
                          checkboxGroupInput("CMPlayers", "CMP layers",
                                             c("Cobia Migratory Zones" = "CobiaMigratoryZones",
                                               "King Mackerel Migratory Zones" = "KingMackerelMigratoryZones",
-                                              "Spanish Mackerel" = "SpanishMackerelMigratoryZones"))
+                                              "Spanish Mackerel" = "SpanishMackerelMigratoryZones"),
+                                            selected="SpanishMackerelMigratoryZones")
                          ),
                     # 
                     conditionalPanel(
                          condition = "input.selectFMP == 'LOBSTER'",
                          checkboxGroupInput("LOBSTERlayers", "Lobster layers:",
                                             c("Lobster Trap Closure" = "LobsterTrapClosure"
-                                              ))
+                                              ), selected="LobsterTrapClosure")
                     ),
 
+                    conditionalPanel(
+                      condition = "input.selectFMP == 'SHRIMP'",
+                      checkboxGroupInput("SHRIMPlayers", "Shrimp layers:",
+                                         c("Gulf Shrimp Bycatch" = "GulfShrimpBycatch",
+                                           "Shrimp Crab Separation Zones" = "ShrimpCrabSeparationZones",
+                                           "Southwest Florida Seasonal Trawl Closure" = "SouthwestFloridaSeasonalTrawlClosure",
+                                           "Texas Shrimp Closure" = "TexasShrimpClosure",
+                                           "Tortugas Shrimp Sanctuary" = "TortugasShrimpSanctuary"
+                                           )
+
+                                         , selected="ShrimpCrabSeparationZones")
+                    ),
+                    
+                    
+                    
                     conditionalPanel(
                          condition = "input.selectFMP == 'CORAL'",
                          checkboxGroupInput("CORALlayers", "Coral layers:",
@@ -55,7 +72,9 @@ dashboardPage(
                                               "Pulley Ridge" = "PulleyRidge",
                                               "Stetson Bank" = "StetsonBank",
                                               "Tortugas" = "Tortugas"
-                                            ))
+                                            ),
+                                            selected="PulleyRidge")
+                         
                     ),
                     
                     conditionalPanel(
@@ -77,8 +96,8 @@ dashboardPage(
                     
                     div(
                     dateRangeInput("daterange1", h3("Date range:"),
-                                   start = Sys.Date(),
-                                   end   = Sys.Date()),
+                                   start = SD,
+                                   end   = ED),
                     bsTooltip("daterange1", 
                               "Select range of dates for applicable regulations. Defaults to current date", options = list(container = "body"))
                     ),
@@ -95,7 +114,9 @@ dashboardPage(
           tabItems(
                tabItem(tabName='map',
                   leafletOutput('map',height=600),
-                  tableOutput('tbl2')
+                  tableOutput('tbl2'),
+                  textOutput('tbl3')#,
+                  #verbatimTextOutput('tbl4')
                   ),
                
                tabItem(tabName='table',
