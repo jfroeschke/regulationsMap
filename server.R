@@ -91,6 +91,7 @@ server <- function(input, output) {
                         options = providerTileOptions(noWrap = TRUE)) %>%
                addScaleBar(position="bottomright") %>% 
 setView(-85, 27, zoom=6) %>% 
+               addMiniMap() %>% 
             addMouseCoordinates(style=("basic")) 
             if(input$selectFMP == "LOBSTER"){
              map <- map %>%  setView(-82, 25, zoom=9) 
@@ -131,6 +132,44 @@ setView(-85, 27, zoom=6) %>%
      
      output$tbl = DT::renderDataTable(
           species, options = list(lengthChange = FALSE))
+     
+     # output$Description <- renderUI({
+     #      tags$iframe(src = "MadisonSwanson.html", seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+     # })
+     
+     ##################################################
+     summarySelector <- reactive({
+          df <- subset(df, df$FMP %in% input$selectFMP)
+          df <- arrange(df, desc(order))
+          tmp <- df$RMD
+          tmp
+     })
+     
+     ################################################
+     
+     ##################################################
+     downloadSelector <- reactive({
+          df <- subset(df, df$FMP %in% input$selectFMP)
+          df <- arrange(df, desc(order))
+          tmp <- df$Download
+          tmp
+     })
+     
+     ################################################
+     
+     
+     output$tbl2 <- renderTable({summarySelector()})
+     
+     output$Description <- renderUI({
+          #for(i in 1:length(summarySelector() ))  {
+          tags$iframe(src = summarySelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+               })
+     
+     output$Download <- renderUI({
+          #for(i in 1:length(summarySelector() ))  {
+          tags$iframe(src = downloadSelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+     })
+     
      
 }
 

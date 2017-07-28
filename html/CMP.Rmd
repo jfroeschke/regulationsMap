@@ -1,0 +1,17 @@
+---
+title: "CMP.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+King Mackerel
+A federal king mackerel commercial permit is required to fish for and retain king mackerel in excess of the recreational bag limit in federal waters of the Gulf of Mexico (Gulf), South Atlantic, and Mid-Atlantic regions, to fish under a quota, and to sell king mackerel from federal waters.  These permits are limited access.  In addition, a limited access gillnet endorsement is required to use gillnets in the Gulf Southern Zone.  As of July 6, 2016, there were 1,440 valid or renewable commercial king mackerel permits and 19 valid or renewable gillnet endorsements.  The commercial king mackerel permits do not have an income requirement, which was removed through Amendment 20A (GMFMC and SAFMC 2013a). 
+
+For-hire vessels harvesting CMP species in the Gulf must have either a “Gulf Charter/Headboat permit for CMP” or a “Historical Captain Gulf Charter/Headboat permit for CMP.”  The Gulf CMP for-hire permit is limited access.  As of July 22, 2016, there were 1,291 valid (non-expired) or renewable Gulf CMP Charter/Headboat permits and Historical Captain Gulf CMP Charter/Headboat permits.  
+
+Figure 3.1.1 shows the commercial zones for Gulf and Atlantic king mackerel.  The Gulf Western Zone extends from the southern border of Texas to the Alabama/Florida state line.  The fishing year for this zone is July 1 through June 30.  The Gulf Northern Zone extends from the Alabama/Florida state line in the west to the Lee/Collier county line in the South, with a fishing year of October 1 through September 30.  The Gulf Southern Zone extends south of the Lee/Collier county line, with a fishing year from July 1 through June 30.  In the Gulf Southern Zone, the gillnet season opens on the day after the Martin Luther King, Jr. holiday.  Gillnet fishing is allowed during the first weekend thereafter, but not on subsequent weekends.
+
+The waters off Florida are divided at the Monroe/Dade county line, which corresponds to the easternmost border between the Gulf and Atlantic king mackerel migratory groups.  The Florida East Coast Subzone is currently from the Flagler/Volusia county line south to the Dade/Monroe county line and only exists from November 1 through March 31 (Figure 3.1.1A).  King mackerel in this subzone are considered part of the Atlantic migratory group during summer (Figure 3.1.1B).  

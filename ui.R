@@ -6,7 +6,7 @@ dashboardPage(
           dashboardSidebar(
                sidebarMenu(id = "tab",
                     menuItem("Map", tabName = "map", icon = icon("globe"),selected=TRUE),
-                    menuItem("Table", tabName = "table", icon = icon("table")),
+                    #menuItem("Table", tabName = "table", icon = icon("table")),
                     tags$hr(style="border-color: white;"),
                     tags$head(includeCSS("Style.css")),
                     div(
@@ -114,14 +114,17 @@ dashboardPage(
           tabItems(
                tabItem(tabName='map',
                   leafletOutput('map',height=600),
-                  tableOutput('tbl2'),
-                  textOutput('tbl3')#,
+                  box(htmlOutput("Description"), width=8),
+                  box(htmlOutput("Download"), width=4),
+                  #box("Metadata and download will go here", width=4),
+                   tableOutput('tbl2')#,
+                  # textOutput('tbl3')#,
                   #verbatimTextOutput('tbl4')
-                  ),
+                  )#,
                
-               tabItem(tabName='table',
-                       DT::dataTableOutput('tbl')
-                       )
+               # tabItem(tabName='table',
+               #         DT::dataTableOutput('tbl')
+               #         )
           )
           
           )

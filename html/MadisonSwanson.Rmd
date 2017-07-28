@@ -1,0 +1,11 @@
+---
+title: "MadisonSwanson"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Madison-Swanson and Steamboat Lumps Marine Reserves - No-take marine reserves (total area is 219 nm2 or 405 km2) sited based on gag spawning aggregation areas where all fishing is prohibited except surface trolling from May through October (GMFMC 1999; 2003). 
+

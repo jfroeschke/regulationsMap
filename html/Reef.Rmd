@@ -1,0 +1,23 @@
+---
+title: "All"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Longline/Buoy Gear Area Closure – Permanent closure to use of these gears for reef fish harvest inshore of 118 feet (36.6 meters) off the Florida shelf and inshore of 293 feet (91.4 meters) for the remainder of the Gulf, and encompasses 72,300 square nautical miles (nm2) or 133,344 km2 (GMFMC 1989).  Bottom longline gear is prohibited inshore of 35 fathoms (54.3 meters) during the months of June through August in the eastern Gulf (GMFMC 2009), but is not depicted in Figure 3.2.2.
+
+Madison-Swanson and Steamboat Lumps Marine Reserves - No-take marine reserves (total area is 219 nm2 or 405 km2) sited based on gag spawning aggregation areas where all fishing is prohibited except surface trolling from May through October (GMFMC 1999; 2003). 
+
+The Edges Marine Reserve – All fishing is prohibited in this area (390 nm2 or 1,338 km2) from January through April and possession of any fish species is prohibited, except for such possession aboard a vessel in transit with fishing gear stowed as specified.  The provisions of this do not apply to highly migratory species (GMFMC 2008).
+
+Tortugas North and South Marine Reserves – No-take marine reserves (185 nm2) cooperatively implemented by the state of Florida, National Ocean Service, the Gulf of Mexico Fishery Management Council (Council), and the National Park Service in Generic Amendment 2 Establishing the Tortugas Marine Reserves (GMFMC 2001).  
+
+Reef and bank areas designated as Habitat Areas of Particular Concern (HAPCs) in the northwestern Gulf of Mexico include – East and West Flower Garden Banks, Stetson Bank, Sonnier Bank, MacNeil Bank, 29 Fathom, Rankin Bright Bank, Geyer Bank, McGrail Bank, Bouma Bank, Rezak Sidner Bank, Alderice Bank, and Jakkula Bank – pristine coral areas protected by preventing the use of some fishing gear that interacts with the bottom and prohibited use of anchors (totaling 263.2 nm2 or 487.4 km2).  Subsequently, three of these areas were established as marine sanctuaries (i.e., East and West Flower Garden Banks and Stetson Bank).  Bottom anchoring and the use of trawling gear, bottom longlines, buoy gear, and all traps/pots on coral reefs are prohibited in the East and West Flower Garden Banks, McGrail Bank, and on significant coral resources on Stetson Bank (GMFMC 2005).  
+
+Florida Middle Grounds HAPC - Pristine soft coral area (348 nm2 or 644.5 km2) that is protected by prohibiting the following gear types:  bottom longlines, trawls, dredges, pots and traps (GMFMC and SAFMC 1982).  
+
+Pulley Ridge HAPC - A portion of the HAPC (2,300 nm2 or 4,259 km2) where deepwater hermatypic coral reefs are found is closed to anchoring and the use of trawling gear, bottom longlines, buoy gear, and all traps/pots (GMFMC 2005).  
+
+Alabama Special Management Zone – For vessels operating as a charter vessel or headboat, a vessel that does not have a commercial permit for Gulf of Mexico reef fish, or a vessel with such a permit fishing for Gulf of Mexico reef fish, fishing is limited to hook-and-line gear with no more than three hooks.  Nonconforming gear is restricted to recreational bag limits, or for reef fish without a bag limit, to 5% by weight of all fish aboard.

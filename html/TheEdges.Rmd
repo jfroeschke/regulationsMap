@@ -1,0 +1,10 @@
+---
+title: "TheEdges"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The Edges Marine Reserve – All fishing is prohibited in this area (390 nm2 or 1,338 km2) from January through April and possession of any fish species is prohibited, except for such possession aboard a vessel in transit with fishing gear stowed as specified.  The provisions of this do not apply to highly migratory species (GMFMC 2008).
