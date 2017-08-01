@@ -5,9 +5,10 @@ dashboardPage(
      dashboardHeader(title="Title"),
           dashboardSidebar(
                sidebarMenu(id = "tab",
-                    menuItem("Map", tabName = "map", icon = icon("globe"),selected=TRUE),
+                    #menuItem("Map", tabName = "map", icon = icon("globe"),selected=TRUE),
+                    menuItem(" ", tabName = "map",selected=TRUE),
                     #menuItem("Table", tabName = "table", icon = icon("table")),
-                    tags$hr(style="border-color: white;"),
+                    #tags$hr(style="border-color: #808080;"),
                     tags$head(includeCSS("Style.css")),
                     div(
                          selectInput("selectSector", h3("I'm looking for:"),
@@ -96,8 +97,8 @@ dashboardPage(
                     
                     div(
                     dateRangeInput("daterange1", h3("Date range:"),
-                                   start = SD,
-                                   end   = ED),
+                                   start = Sys.Date(),
+                                   end   = Sys.Date()),
                     bsTooltip("daterange1", 
                               "Select range of dates for applicable regulations. Defaults to current date", options = list(container = "body"))
                     ),
@@ -116,9 +117,8 @@ dashboardPage(
                   leafletOutput('map',height=600),
                   box(htmlOutput("Description"), width=8),
                   box(htmlOutput("Download"), width=4),
-                  #box("Metadata and download will go here", width=4),
-                   tableOutput('tbl2')#,
-                  # textOutput('tbl3')#,
+                  tableOutput('tblx')
+                  #textOutput('tbl3')#,
                   #verbatimTextOutput('tbl4')
                   )#,
                

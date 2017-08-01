@@ -1,19 +1,31 @@
 ---
-title: "SpinyLobsterDownload"
-output: html_document
+title: "Spiny Lobster Download"
+output:
+  html_document:
+    theme: null
+    css: lobster.css
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+***
 
-## Download areas closed to spiny lobster trap gear GIS Data
+
+## Areas closed to spiny lobster trap gear GIS Data
+<br>
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/lobster_trap.txt">Section 622.406 Areas closed to lobster trap gear</a>.
+
+
+
 
 Maps:
 <br>
 GIS Data: <a href="http://portal.gulfcouncil.org/AreasClosedtoLobsterTraps/lobster_trap_gear.zip">Shapefile</a>
 <br>
-Metadata
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/lobster_trap_gear_po.htm">polygon html</a> 
 <br>
 Google Earth: 
 
+***

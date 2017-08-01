@@ -1,16 +1,33 @@
 ---
-title: "SpinyLobster"
-output: html_document
+title: "Spiny Lobster"
+output:
+  html_document:
+    theme: null
+    css: lobster.css
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+***
+
 
 ## Why are these areas closed to spiny lobster trap fishing?
-NOAA Fisheries Service and the Gulf and South Atlantic Fishery Management Councils have created closed areas to protect threatened staghorn and elkhorn coral (Acropora spp.) Prohibiting the use of
-lobster traps near these corals reduces their risk of damage due to trap movement caused mostly by
+<!-- 
+ <img class="wrap" src="lobster.jpg"  height="100" width="150" HSPACE="10" VSPACE="5">
+-->
+
+<img class="wrap" src="SpinyLobsterSideImage.png"  height="338" width="99" HSPACE="10" VSPACE="5">
+
+NOAA Fisheries Service and the Gulf and South Atlantic Fishery Management Councils have created closed areas to protect threatened staghorn and elkhorn coral (Acropora spp.) Prohibiting the use of lobster traps near these corals reduces their risk of damage due to trap movement caused mostly by
 storms.
+
+
+
+
+
+<br>
 
 ## Why are these corals protected?
 Staghorn and elkhorn corals are a food source and provide important habitat for many different fish and invertebrates including spiny lobster. Staghorn and elkhorn coral populations have been reduced by 90-95% since 1980.
@@ -19,6 +36,13 @@ The shows only coral areas and closures in federal waters because the Gulf and
 South Atlantic Councils’ management area are limited to federal waters.
 
 
-<div style="width:150px; height=100px">
-![](Lobster.jpg)
-</div>
+
+
+***
+<footer>
+  <p>For more information about these data contact:</p>
+  <p><a href="mailto:portal@gulfcouncil.org">
+  portal@gulfcouncil.org</a>.</p>
+</footer>
+
+***

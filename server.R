@@ -25,9 +25,6 @@ server <- function(input, output) {
                     df <- subset(df, df$Name2 %in%  input$CORALlayers)
                }
               
-                    df <- subset(df, Start <= input$daterange1[1])
-                    df <- subset(df, End >= input$daterange1[2])
-               
                df <- arrange(df, desc(order))
                tmp <- df$URL
                tmp
@@ -36,7 +33,7 @@ server <- function(input, output) {
      legendSelector <- reactive({
           df2 <- subset(df, df$FMP %in% input$selectFMP)
           df2 <- arrange(df2, order)
-          df2 <- select(df2, Color, Name)
+          #df2 <- select(df2, Color, Name)
           tmp <- df2
           tmp
      })
@@ -75,13 +72,12 @@ server <- function(input, output) {
                               
      })
      
-    test <- reactive({data.frame(input$map_bounds)
-    })
+    #test <- reactive({data.frame(input$map_bounds)})
 
       
-      #output$tbl2 <- renderTable({legendSelector()})
-      output$tbl2 <- renderTable({inBounds()})
-      output$tbl3 <- renderText({input$map_zoom})
+      output$tblx <- renderTable({input$map_bounds})
+      #output$tbl2 <- renderTable({input$map_bounds})
+      # output$tbl3 <- renderText({input$map_zoom})
       #output$tbl4 <- renderPrint({input$lat})
      output$map <- renderLeaflet({  
           map <- leaflet() %>% 
@@ -90,16 +86,14 @@ server <- function(input, output) {
                addTiles('http://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/Mapserver/tile/{z}/{y}/{x}',
                         options = providerTileOptions(noWrap = TRUE)) %>%
                addScaleBar(position="bottomright") %>% 
-setView(-85, 27, zoom=6) %>% 
-               addMiniMap() %>% 
-            addMouseCoordinates(style=("basic")) 
+              setView(-85, 27, zoom=6) %>% 
+            addMouseCoordinates(style=("basic")) #%>% 
+          
+            #addHomeButton(ext=EXTENT, HTML("<i>Home</>"))
             if(input$selectFMP == "LOBSTER"){
              map <- map %>%  setView(-82, 25, zoom=9) 
             }
-              
-              
-            
-          
+        
           map <- map %>%  addLegend(colors=c(legendSelector()$Color),
                          labels=c(legendSelector()$Name),
                          opacity=1, position="bottomleft")
@@ -132,27 +126,22 @@ setView(-85, 27, zoom=6) %>%
      
      output$tbl = DT::renderDataTable(
           species, options = list(lengthChange = FALSE))
-     
-     # output$Description <- renderUI({
-     #      tags$iframe(src = "MadisonSwanson.html", seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
-     # })
-     
      ##################################################
      summarySelector <- reactive({
-          df <- subset(df, df$FMP %in% input$selectFMP)
-          df <- arrange(df, desc(order))
-          tmp <- df$RMD
-          tmp
+       df <- subset(df, df$FMP %in% input$selectFMP)
+       df <- arrange(df, desc(order))
+       tmp <- df$RMD
+       tmp
      })
      
      ################################################
      
      ##################################################
      downloadSelector <- reactive({
-          df <- subset(df, df$FMP %in% input$selectFMP)
-          df <- arrange(df, desc(order))
-          tmp <- df$Download
-          tmp
+       df <- subset(df, df$FMP %in% input$selectFMP)
+       df <- arrange(df, desc(order))
+       tmp <- df$Download
+       tmp
      })
      
      ################################################
@@ -161,16 +150,14 @@ setView(-85, 27, zoom=6) %>%
      output$tbl2 <- renderTable({summarySelector()})
      
      output$Description <- renderUI({
-          #for(i in 1:length(summarySelector() ))  {
-          tags$iframe(src = summarySelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
-               })
-     
-     output$Download <- renderUI({
-          #for(i in 1:length(summarySelector() ))  {
-          tags$iframe(src = downloadSelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+       #for(i in 1:length(summarySelector() ))  {
+       tags$iframe(src = summarySelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
      })
      
-     
+     output$Download <- renderUI({
+       #for(i in 1:length(summarySelector() ))  {
+       tags$iframe(src = downloadSelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+     })
 }
 
 

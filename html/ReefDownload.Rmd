@@ -1,15 +1,101 @@
 ---
-title: "ReefDownload"
-output: html_document
+title: "Reef Fish Download"
+output:
+  html_document:
+    theme: null
+    css: lobster.css
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+***
 
-## Download Reef Fish data
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Madison and Swanson sites and Steamboat Lumps, and the Edges
 
-<http://portal.gulfcouncil.org/gulfcoral/gulfcoral.zip>.
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/madswan_steam_edges.txt">Section 622.34 Seasonal and area closures designed to protect Gulf reef fish (a)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/madswan_steamboat_edges.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/madswan_steamboat_edges_po.htm">polygon html</a> 
+<br>
+Google Earth: 
 
+### Seasonal Closure of the Recreational Sector for Shallow-Water Grouper (SWG)
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/swg.txt">Section 622.34 Seasonal and area closures designed to protect Gulf reef fish (d)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/swg.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/swg_ln.htm">line html</a> 
+<br>
+Google Earth:
+
+### Reef Fish Stressed Area
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/reef_stressed.txt">Section 622.35 Gear restricted areas (a)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/reef_stressed.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/reef_stressed_po.htm">polygoon html</a> 
+<br>
+Google Earth:
+
+
+### Closure of the Gulf Shrimp Fishery to Reduce Red Snapper Bycatch
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/tortugas_shrimp.txt">Section 622.55 Closed areas (d)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/gulfshrimp_bycatch.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/gulfshrimp_bycatch_po.htm">polygoon html</a> 
+<br>
+Google Earth:
+
+### Seasonal Prohibitions Applicable to Bottom Longline Fishing for Gulf Reef Fish
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/seasonal_prohib_longline.txt">Section 622.35 Gear restricted areas (b)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="gulf_reefll_seasonal.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/gulf_reefll_seasonal_po.htm">polygoon html</a> 
+<br>
+Google Earth:
+
+### Reef Fish Longline and Buoy Gear Restricted Area
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/longlinebuoy.txt">Section 622.35 Gear restricted areas (c)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="longline_buoy.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/longline_buoy_po.htm">polygoon html</a> 
+<br>
+Google Earth:
+
+### Alabama Special Management Zone (SMZ)
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/alabamasmz.txt">Section 622.35 Gear restricted areas (d)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="al_smz.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/al_smz_po.htm">polygoon html</a> 
+<br>
+Google Earth:
+
+***

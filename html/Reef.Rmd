@@ -1,23 +1,77 @@
 ---
-title: "All"
-output: html_document
+title: "Gulf of Mexico Reef Fish"
+output:
+  html_document:
+    theme: null
+    css: lobster.css
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Longline/Buoy Gear Area Closure – Permanent closure to use of these gears for reef fish harvest inshore of 118 feet (36.6 meters) off the Florida shelf and inshore of 293 feet (91.4 meters) for the remainder of the Gulf, and encompasses 72,300 square nautical miles (nm2) or 133,344 km2 (GMFMC 1989).  Bottom longline gear is prohibited inshore of 35 fathoms (54.3 meters) during the months of June through August in the eastern Gulf (GMFMC 2009), but is not depicted in Figure 3.2.2.
+***
+<!-- Alabama SMZ -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #f7fcb9; stroke: #f7fcb9; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Alabama Special Management Zone</b></font></td></tr></table>
 
-Madison-Swanson and Steamboat Lumps Marine Reserves - No-take marine reserves (total area is 219 nm2 or 405 km2) sited based on gag spawning aggregation areas where all fishing is prohibited except surface trolling from May through October (GMFMC 1999; 2003). 
 
-The Edges Marine Reserve – All fishing is prohibited in this area (390 nm2 or 1,338 km2) from January through April and possession of any fish species is prohibited, except for such possession aboard a vessel in transit with fishing gear stowed as specified.  The provisions of this do not apply to highly migratory species (GMFMC 2008).
+For vessels operating as a charter vessel or headboat, a vessel that does not have a commercial permit for Gulf of Mexico reef fish, or a vessel with such a permit fishing for Gulf of Mexico reef fish, fishing is limited to hook-and-line gear with no more than three hooks.  Nonconforming gear is restricted to recreational bag limits, or for reef fish without a bag limit, to 5% by weight of all fish aboard.
 
-Tortugas North and South Marine Reserves – No-take marine reserves (185 nm2) cooperatively implemented by the state of Florida, National Ocean Service, the Gulf of Mexico Fishery Management Council (Council), and the National Park Service in Generic Amendment 2 Establishing the Tortugas Marine Reserves (GMFMC 2001).  
+<!-- End Alabama SMZ -->
+<!-- Gulf Reef Fish Longline Seasonal Closure -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #d9f0a3; stroke: #d9f0a3; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Gulf Reef Fish Longline Seasonal Closure</b></font></td></tr></table>
 
-Reef and bank areas designated as Habitat Areas of Particular Concern (HAPCs) in the northwestern Gulf of Mexico include – East and West Flower Garden Banks, Stetson Bank, Sonnier Bank, MacNeil Bank, 29 Fathom, Rankin Bright Bank, Geyer Bank, McGrail Bank, Bouma Bank, Rezak Sidner Bank, Alderice Bank, and Jakkula Bank – pristine coral areas protected by preventing the use of some fishing gear that interacts with the bottom and prohibited use of anchors (totaling 263.2 nm2 or 487.4 km2).  Subsequently, three of these areas were established as marine sanctuaries (i.e., East and West Flower Garden Banks and Stetson Bank).  Bottom anchoring and the use of trawling gear, bottom longlines, buoy gear, and all traps/pots on coral reefs are prohibited in the East and West Flower Garden Banks, McGrail Bank, and on significant coral resources on Stetson Bank (GMFMC 2005).  
+Seasonal prohibitions applicable to bottom longline fishing for Gulf reef fish. 
+<!-- End Gulf Reef Fish Longline Seasonal Closure -->
 
-Florida Middle Grounds HAPC - Pristine soft coral area (348 nm2 or 644.5 km2) that is protected by prohibiting the following gear types:  bottom longlines, trawls, dredges, pots and traps (GMFMC and SAFMC 1982).  
 
-Pulley Ridge HAPC - A portion of the HAPC (2,300 nm2 or 4,259 km2) where deepwater hermatypic coral reefs are found is closed to anchoring and the use of trawling gear, bottom longlines, buoy gear, and all traps/pots (GMFMC 2005).  
+<!-- Longline/Buoy Gear Area Closure -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #addd8e; stroke: #addd8e; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Longline Buoy Gear Closure</b></font></td></tr></table>
 
-Alabama Special Management Zone – For vessels operating as a charter vessel or headboat, a vessel that does not have a commercial permit for Gulf of Mexico reef fish, or a vessel with such a permit fishing for Gulf of Mexico reef fish, fishing is limited to hook-and-line gear with no more than three hooks.  Nonconforming gear is restricted to recreational bag limits, or for reef fish without a bag limit, to 5% by weight of all fish aboard.
+
+Permanent closure to use of these gears for reef fish harvest inshore of 118 feet (36.6 meters) off the Florida shelf and inshore of 293 feet (91.4 meters) for the remainder of the Gulf, and encompasses 72,300 square nautical miles (nm2) or 133,344 km2 (GMFMC 1989).  Bottom longline gear is prohibited inshore of 35 fathoms (54.3 meters) during the months of June through August in the eastern Gulf (GMFMC 2009), but is not depicted in Figure 3.2.2.
+<!-- End Longline/Buoy Gear Area Closure -->
+
+
+<!-- Madison-Swanson and Steamboat Lumps Marine Reserves -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #78c679; stroke: #78c679; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Madison Swanson</b></font></td></tr></table>
+
+No-take marine reserves (total area is 219 nm<sup>2</sup> or 405 km<sup>2</sup> ) sited based on gag spawning aggregation areas where all fishing is prohibited except surface trolling from May through October (GMFMC 1999; 2003).
+<!-- EndMadison-Swanson and Steamboat Lumps Marine Reserves -->
+
+
+<!-- Reef Fish Stressed Area -->
+
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #41ab5d; stroke: #41ab5d; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Reef Fish Stressed Area</b></font></td></tr></table>
+
+A powerhead may not be used in the stressed area to take Gulf reef fish. A roller trawl may not be used in the stressed area.
+
+<!-- End Reef Fish Stressed Area -->
+
+<!-- Shallow Water Group Closed Area -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #238443; stroke: #238443; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Shallow Water Grouper Closed Area</b></font></td></tr></table>
+
+The recreational sector for SWG, in or from the Gulf EEZ, is closed each year from February 1 through March 31.
+<!-- End Shallow Water Group Closed Area -->
+
+<!-- Steamboat Lumps Marine Reserve -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #006837; stroke: #006837; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Steamboat Lumps</b></font></td></tr></table>
+
+No-take marine reserves (total area is 219 nm<sup>2</sup> or 405 km<sup>2</sup> ) sited based on gag spawning aggregation areas where all fishing is prohibited except surface trolling from May through October (GMFMC 1999; 2003).
+<!-- End Steamboat Lumps Marine Reserve -->
+
+
+<!--The Edges Marine Reserve-->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #004529; stroke: #004529; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>The Edges</b></font></td></tr></table>
+
+All fishing is prohibited in this area (390 nm2 or 1,338 km2) from January through April and possession of any fish species is prohibited, except for such possession aboard a vessel in transit with fishing gear stowed as specified.  The provisions of this do not apply to highly migratory species (GMFMC 2008).
+<!-- End The Edges Marine Reserve -->
+
+***
+<footer>
+  <p>For more information about these data contact:</p>
+  <p><a href="mailto:portal@gulfcouncil.org">
+  portal@gulfcouncil.org</a>.</p>
+</footer>
+
+***

@@ -1,0 +1,63 @@
+---
+title: "Coral"
+output:
+  html_document:
+    theme: null
+    css: lobster.css
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+***
+<!-- East and West Flower Garden Banks -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #feebe2; stroke: #feebe2; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>East and West Flower Garden Banks</b></font></td></tr></table>
+
+No fishing with bottom longline, bottom trawl, buoy gear, dredge, pot or trap, and bottom anchoring by fishing vessels year round.
+<!-- End East and West Flower Garden Banks -->
+
+<!-- McGrail Bank -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #fcc5c0; stroke: #fcc5c0; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>McGrail Bank</b></font></td></tr></table>
+
+No fishing with bottom longline, bottom trawl, buoy gear, pot or trap, and bottom anchoring by fishing vessels year round.
+<!-- McGrail Bank -->
+
+
+<!-- Middle Grounds -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #fa9fb5; stroke: #fa9fb5; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Middle Grounds</b></font></td></tr></table>
+
+No fishing with bottom longline, bottom trawl, dredge, and pots or traps year round.
+
+<!-- End Middle Grounds -->
+
+
+<!-- Pulley Ridge -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #f768a1; stroke: #f768a1; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Pulley Ridge</b></font></td></tr></table>
+
+No fishing with bottom longline, bottom trawl, buoy gear, pot or trap, and bottom anchoring by fishing vessels year round.
+<!-- End Pulley Ridge -->
+
+
+<!-- Stetson Bank -->
+
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #c51b8a; stroke: #c51b8a; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Stetson Bank</b></font></td></tr></table>
+
+No fishing with bottom longline, bottom trawl, buoy gear, pot or trap, and bottom anchoring by fishing vessels year round.
+
+<!-- End Stetson Bank -->
+
+<!-- Tortugas North and South Marine Reserves -->
+<table><tr><td class="shape"><svg style="width:24px; height:22px;" xmlns="http://www.w3.org/2000/svg" version="1.1"><polygon class="plgn" style="fill: #7a0177; stroke: #7a0177; fill-opacity: 1; stroke-opacity: 1.0; stroke-width: 1;" points="1.5, 0.5 22.5, 11 22.5, 21.5 1.5, 21.5" /></svg></td><td class="value"><font size="4"><b>Tortugas North and South Marine Reserves</b></font></td></tr></table>
+
+No fishing for any species and anchoring by fishing vessels year round. 
+<!-- End Tortugas North and South Marine Reserves -->
+
+***
+<footer>
+  <p>For more information about these data contact:</p>
+  <p><a href="mailto:portal@gulfcouncil.org">
+  portal@gulfcouncil.org</a>.</p>
+</footer>
+
+***

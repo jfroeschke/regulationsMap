@@ -1,0 +1,88 @@
+---
+title: "Coral and Coral Reefs Download"
+output:
+  html_document:
+    theme: null
+    css: lobster.css
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+***
+
+
+## West and East Flower Garden Banks HAPC
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/flower_gardens.txt">Section 622.74 Area closures to protect Gulf corals (a)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/flowergardenhapc.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/flowergardenhapc_po.htm">polygon html</a> 
+<br>
+Google Earth: 
+
+## Florida Middle Grounds HAPC
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/flmiddlegrounds.txt">Section 622.74 Area closures to protect Gulf corals (b)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/middlegroundshapc.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/middlegroundshapc_po.htm">polygon html</a> 
+<br>
+Google Earth:
+
+### Tortugas Marine Reserves HAPC
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/tortugashapc.txt">Section 622.74 Area closures to protect Gulf corals (c)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/tortugasmr_hapc.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/tortugasmr_hapc_po.htm">polygon html</a> 
+<br>
+Google Earth:
+
+### Pulley Ridge HAPC
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/pulley_ridge.txt">Section 622.74 Area closures to protect Gulf corals (d)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/pulley_ridgehapc.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/pulley_ridgehapc_po.htm">polygon html</a> 
+<br>
+Google Earth:
+
+### Stetson Bank HAPC
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/stetson.txt">Section 622.74 Area closures to protect Gulf corals (e)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/stetson_bankhapc.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/stetson_bankhapc_po.htm">polygon html</a> 
+<br>
+Google Earth:
+
+### McGrail Bank HAPC
+
+<a target= '_blank' href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/documents/mcgrail.txt">Section 622.74 Area closures to protect Gulf corals (f)</a>.
+<br>
+Maps:
+<br>
+GIS Data: <a href="http://portal.gulfcouncil.org/Regulations/mcgrail_bankhapc.zip">Shapefile</a>
+<br>
+Metadata: <a href="http://sero.nmfs.noaa.gov/maps_gis_data/fisheries/gom/geodata/mcgrail_bankhapc_po.htm">polygon html</a> 
+<br>
+Google Earth:
+
+***

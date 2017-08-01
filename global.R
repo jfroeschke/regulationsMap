@@ -12,6 +12,9 @@ library(mapview)
 library(DT)
 library(leaflet.esri)
 library(dplyr)
+library(raster)
+
+EXTENT <- extent(c(-100.42, -69.59, 20.82, 32.57))
 
 enableBookmarking(store = "url")
 #load("df.RData")
