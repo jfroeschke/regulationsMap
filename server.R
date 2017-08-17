@@ -111,7 +111,8 @@ server <- function(input, output) {
           # })
         for(i in 1:length(superSelector())){
           map <- map  %>%
-            addEsriDynamicMapLayer(superSelector()[i], group="A")
+            #addEsriDynamicMapLayer(superSelector()[i], group="A")
+          addTiles(superSelector()[i], group="A")
         }
           
         map
