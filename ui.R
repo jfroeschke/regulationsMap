@@ -2,7 +2,7 @@
 
 
 dashboardPage(
-     dashboardHeader(title="Title"),
+     dashboardHeader(title="GIS Data for the Gulf of Mexico Fisheries"),
           dashboardSidebar(
                sidebarMenu(id = "tab",
                     #menuItem("Map", tabName = "map", icon = icon("globe"),selected=TRUE),
@@ -10,12 +10,12 @@ dashboardPage(
                     #menuItem("Table", tabName = "table", icon = icon("table")),
                     #tags$hr(style="border-color: #808080;"),
                     tags$head(includeCSS("Style.css")),
-                    div(
-                         selectInput("selectSector", h3("I'm looking for:"),
-                                     c("Commercial regualtions" = "COMMERCIAL",
-                                       "Recreational regulations" = "RECREATIONAL",
-                                       "All regulations" = "ALL"),
-                                     selected = "COMMERCIAL")),
+                    # div(
+                    #      selectInput("selectSector", h3("I'm looking for:"),
+                    #                  c("Commercial regualtions" = "COMMERCIAL",
+                    #                    "Recreational regulations" = "RECREATIONAL",
+                    #                    "All regulations" = "ALL"),
+                    #                  selected = "COMMERCIAL")),
                     div(
                          selectInput("selectFMP", multiple=FALSE,
                                      h3("Select Fishery Management Plan:"),
@@ -113,13 +113,43 @@ dashboardPage(
                     )),
      dashboardBody(
           tabItems(
-               tabItem(tabName='map',
+               tabItem(tabName='map',includeHTML('modalHTML4.html'),
+                       includeScript('modalJS.js'),
                   leafletOutput('map',height=600),
+                  #downloadButton("dl"),
                   box(htmlOutput("Description"), width=8),
                   box(htmlOutput("Download"), width=4),
-                  tableOutput('tblx')
+                  #tableOutput('tblx'),
                   #textOutput('tbl3')#,
                   #verbatimTextOutput('tbl4')
+                  
+                  ################# Experimental
+                  absolutePanel(id = "controls", class = "panel panel-default", fixed = FALSE,
+                                draggable = TRUE, top = 100, left = "auto", right = 20, bottom = "auto",
+                                width = 150, height = "auto",
+                                wellPanel(
+                                     #HTML('<button data-toggle="collapse" data-target="#demo">Minimize controls</button>'),
+                                     tags$div(id = 'demo',  class="collapse in",
+
+                                              div(downloadButton("dl", "Save map"), style="text-align: center;"),
+                                              #actionButton("go", "Save map"),
+                                              div(
+                                                   br(),
+                                                   div(actionButton("home"," ", icon=icon("home")), style="text-align: center;")
+
+
+                                              )
+                                     )
+                                )
+                  )
+                  ################# Experimental
+                  
+                  
+                  
+                  
+                  
+                  
+                  
                   )#,
                
                # tabItem(tabName='table',

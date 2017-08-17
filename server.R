@@ -87,6 +87,7 @@ server <- function(input, output) {
                         options = providerTileOptions(noWrap = TRUE)) %>%
                addScaleBar(position="bottomright") %>% 
               setView(-85, 27, zoom=6) %>% 
+               addMiniMap() %>% 
             addMouseCoordinates(style=("basic")) #%>% 
           
             #addHomeButton(ext=EXTENT, HTML("<i>Home</>"))
@@ -117,7 +118,7 @@ server <- function(input, output) {
       })
      
       observeEvent(input$map_zoom,{
-        leafletProxy("map") %>% 
+       leafletProxy("map") %>% 
           setView(lat  = (input$map_bounds$north + input$map_bounds$south) / 2,
                   lng  = (input$map_bounds$east + input$map_bounds$west) / 2,
                   zoom = input$map_zoom)
@@ -158,6 +159,28 @@ server <- function(input, output) {
        #for(i in 1:length(summarySelector() ))  {
        tags$iframe(src = downloadSelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
      })
+     
+     ## Download a map
+     output$dl <- downloadHandler(
+          filename = "map.png",
+          
+          content = function(file) {
+               mapshot(map, file = file)
+          }
+     )
+     
+     
+     
+     ## End : Download a map
+     ################################################################################
+     observeEvent(input$home,{
+          map  <- leafletProxy("map") %>%
+               setView(-85, 27, zoom=6)
+          map
+     })
+     ################################################################################ 
+     
+     
 }
 
 
