@@ -2,9 +2,9 @@ name: regulationsMap
 account: gulfcouncilportal
 server: shinyapps.io
 appId: 190813
-bundleId: 875120
+bundleId: 944693
 url: https://gulfcouncilportal.shinyapps.io/regulationsMap/
-when: 1497963712.13248
+when: 1502994424.87034
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: data/al_smz.zip|data/gulf_reefll_seasonal.zip|data/longline_buoy.zip|data/madswan_steamboat_edges.zip|data/NGrouper.zip|data/reef_stressed.zip|data/SGrouper.zip|data/texasClosure.zip|data/texasClosureExcept.zip
+ignoredFiles: dataprep.R|df.csv|df1.csv|getnames.csv|layertest.R|maplayers.csv|README.md|species.csv|data/al_smz.zip|data/gulf_reefll_seasonal.zip|data/longline_buoy.zip|data/madswan_steamboat_edges.zip|data/NGrouper.zip|data/reef_stressed.zip|data/SGrouper.zip|data/texasClosure.zip|data/texasClosureExcept.zip|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.dbf|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.htm|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.prj|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.sbn|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.sbx|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.shp|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.shp.xml|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt.shx|data/GulfShrimpBycatchpt/GulfShrimp_bycatch_pt_ISO.xml|mxd/LayerOrder.mxd
