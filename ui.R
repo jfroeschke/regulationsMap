@@ -2,7 +2,7 @@
 
 
 dashboardPage(
-     dashboardHeader(title="GIS Data for the Gulf of Mexico Fisheries"),
+     dashboardHeader(disable=TRUE),#title="GIS Data for the Gulf of Mexico Fisheries"),
           dashboardSidebar(
                sidebarMenu(id = "tab",
                     #menuItem("Map", tabName = "map", icon = icon("globe"),selected=TRUE),
@@ -117,7 +117,7 @@ dashboardPage(
                        includeScript('modalJS.js'),
                   leafletOutput('map',height=600),
                   #downloadButton("dl"),
-                  box(htmlOutput("Description"), width=8),
+                  box(htmlOutput("Description"), width=12),
                   box(htmlOutput("Download"), width=4),
                   #tableOutput('tblx'),
                   #textOutput('tbl3')#,
