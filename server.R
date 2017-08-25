@@ -88,6 +88,7 @@ server <- function(input, output) {
                addScaleBar(position="bottomright") %>% 
               setView(-85, 27, zoom=6) %>% 
                addMiniMap() %>% 
+               addFullscreenControl() %>%
             addMouseCoordinates(style=("basic")) #%>% 
           
             #addHomeButton(ext=EXTENT, HTML("<i>Home</>"))
@@ -153,13 +154,13 @@ server <- function(input, output) {
      
      output$Description <- renderUI({
        #for(i in 1:length(summarySelector() ))  {
-       tags$iframe(src = summarySelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+       tags$iframe(src = summarySelector()[1], seamless=NA, width="100%", style="height: calc(100vh - 80px)",frameborder=0)
      })
      
-     output$Download <- renderUI({
-       #for(i in 1:length(summarySelector() ))  {
-       tags$iframe(src = downloadSelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
-     })
+     # output$Download <- renderUI({
+     #   #for(i in 1:length(summarySelector() ))  {
+     #   tags$iframe(src = downloadSelector()[1], seamless=NA,width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+     # })
      
      ## Download a map
      output$dl <- downloadHandler(

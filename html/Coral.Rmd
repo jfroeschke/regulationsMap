@@ -4,7 +4,6 @@ output:
   html_document:
     theme: null
     css: lobster.css
-
 ---
 
 ```{r setup, include=FALSE}
