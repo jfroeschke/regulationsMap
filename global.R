@@ -13,7 +13,8 @@ library(DT)
 library(leaflet.esri)
 library(dplyr)
 library(raster)
-#library(webshot)
+library(webshot)
+library(htmltools)
 
 EXTENT <- extent(c(-100.42, -69.59, 20.82, 32.57))
 

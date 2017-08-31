@@ -38,6 +38,17 @@ server <- function(input, output) {
           tmp
      })
      
+     
+     imageSelector <- reactive({
+          df2 <- subset(df, df$FMP %in% input$selectFMP)
+          df2 <- arrange(df2, order)
+          #df2 <- select(df2, Color, Name)
+          tmp <- df2$image[1]
+          tmp
+     })
+     
+     #output$side <- renderImage({df$image[1]})
+     
      ## Will use later
      # checkboxSelector <- reactive({
      #      df2 <- subset(df, df$FMP %in% input$selectFMP)
@@ -154,7 +165,7 @@ server <- function(input, output) {
      
      output$Description <- renderUI({
        #for(i in 1:length(summarySelector() ))  {
-       tags$iframe(src = summarySelector()[1], seamless=NA, width="100%", style="height: calc(100vh - 80px)",frameborder=0)
+       tags$iframe(src = summarySelector()[1], seamless=NA, width="100%", style="height: calc(100vh - 80px)",frameborder=0, scrolling="yes")
      })
      
      # output$Download <- renderUI({
@@ -167,7 +178,7 @@ server <- function(input, output) {
           filename = "map.png",
           
           content = function(file) {
-               mapshot(map, file = file)
+               appshot(app="https://gulfcouncilportal.shinyapps.io/regulationsMap/", file = file)
           }
      )
      
