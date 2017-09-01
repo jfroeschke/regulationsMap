@@ -27,11 +27,11 @@ dashboardPage(
                                         "Reef Fish" = "REEF",
                                         "Shrimp" = "SHRIMP"
                                        ),
-                                     selected = c("CORAL")),
+                                     selected = c("CORAL"))#,
                          #div(actionButton("home"," ", icon=icon("home")), style="align:center"),
-                         
-                         bsTooltip("selectFMP", 
-                                   "Select applicable FMP", options = list(container = "body"))
+                         # 
+                         # bsTooltip("selectFMP", 
+                         #           "Select applicable FMP", options = list(container = "body"))
                          # bsPopover("selectFMP", 
                          #           "Select applicable FMP", options = list(container = "body"))
                     ),
