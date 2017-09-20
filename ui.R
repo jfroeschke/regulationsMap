@@ -48,14 +48,14 @@ dashboardPage(
                     # 
                     conditionalPanel(
                          condition = "input.selectFMP == 'LOBSTER'",
-                         checkboxGroupInput("LOBSTERlayers", "Lobster layers:",
+                         checkboxGroupInput("LOBSTERlayers", "Lobster management areas:",
                                             c("Lobster Trap Closure" = "LobsterTrapClosure"
                                               ), selected="LobsterTrapClosure")
                     ),
 
                     conditionalPanel(
                       condition = "input.selectFMP == 'SHRIMP'",
-                      checkboxGroupInput("SHRIMPlayers", "Shrimp layers:",
+                      checkboxGroupInput("SHRIMPlayers", "Shrimp management areas:",
                                          c("Gulf Shrimp Bycatch" = "GulfShrimpBycatch",
                                            "Shrimp Crab Separation Zones" = "ShrimpCrabSeparationZones",
                                            "Southwest Florida Seasonal Trawl Closure" = "SouthwestFloridaSeasonalTrawlClosure",
@@ -70,7 +70,7 @@ dashboardPage(
                     
                     conditionalPanel(
                          condition = "input.selectFMP == 'CORAL'",
-                         checkboxGroupInput("CORALlayers", "Coral layers:",
+                         checkboxGroupInput("CORALlayers", "Coral management areas:",
                                             c("East West FlowerGardenBanks" = "EastWestFlowerGardenBanks",
                                                  "McGrail Bank" = "McGrailBank",
                                               "MiddleGrounds" = "MiddleGrounds",
@@ -84,7 +84,7 @@ dashboardPage(
                     
                     conditionalPanel(
                          condition = "input.selectFMP == 'REEF'",
-                         checkboxGroupInput("REEFlayers", "Reef fish layers:",
+                         checkboxGroupInput("REEFlayers", "Reef fish management areas:",
                                             c("Alabama SMZ" = "AlabamaSMZ",
                                               "Gulf Reef Longline Seasonal Closure" = "GulfReefLonglineSeasonalClosure",
                                               "Longline Buoy Closure" = "LonglineBuoyClosure",
@@ -132,7 +132,7 @@ HTML("<h5 id='title' style='text-align:center;' >Gulf of Mexico <br> Fishery Man
                tabItem(tabName='map',includeHTML('modalHTML4.html'),
                        includeScript('modalJS.js'),
                        #tags$img(src="HAPCViewerBanner.png",  width="100%"),
-                     HTML("<h3 id='title' style='color: white;' >GIS Data Mapping Application for the Gulf of Mexico Fisheries</h3>"),
+                     HTML("<h3 id='title' style='color: white;' ><i>Gulf of Mexico</i> Fishery Management Areas</h3>"),
                   leafletOutput('map',height=600),
                   #downloadButton("dl"),
                   box(htmlOutput("Description"), width=12),

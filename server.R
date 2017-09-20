@@ -100,7 +100,7 @@ server <- function(input, output) {
               setView(-85, 27, zoom=6) %>% 
                addMiniMap() %>% 
                addFullscreenControl() %>%
-            addMouseCoordinates(style=("basic")) #%>% 
+            addMouseCoordinates2(style=("basic")) #%>% 
           
             #addHomeButton(ext=EXTENT, HTML("<i>Home</>"))
             if(input$selectFMP == "LOBSTER"){
