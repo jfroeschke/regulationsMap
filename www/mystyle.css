@@ -36,3 +36,17 @@ body{
      font-family: 'Open Sans', sans-serif;
      color: white;
 }
+
+a {
+    color: yellow;
+}
+
+.caption {
+    font-style: italic;
+    font-size: 12px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}

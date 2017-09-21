@@ -27,6 +27,7 @@ html{
 
 body{
      background-color: #00152e;
+
 }
 
 .container {
@@ -36,4 +37,15 @@ body{
      margin-left: auto;
      font-family: 'Open Sans', sans-serif;
      color: white;
+}
+
+a{
+    color: yellow;
+}
+
+img {  
+    display: block; 
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 5px;
 }
